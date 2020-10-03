@@ -39,7 +39,8 @@ var all_Players=$.parseJSON($.ajax({
         dataType: "json",
         async: false
     }).responseText);
-
+    
+console.log(all_Teams);
 
 document.getElementById('TeamData').innerHTML='<h1>TeamData</h1>'+all_Teams;
 document.getElementById('PlayerData').innerHTML='<h1>PlayerData</h1>'+all_Players;
