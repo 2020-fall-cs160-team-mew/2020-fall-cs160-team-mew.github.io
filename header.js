@@ -5,6 +5,7 @@ header+='<a name="playerdb" href="playerdb.html">PlayerDB</a>';
 header+='<a name="favorites" href="favorites.html">Favorites</a>';
 header+='<a name="newsmedia" href="newsmedia.html">News/Media</a>';
 header+='<a name="games" href="games.html">Games</a>';
+header+='<a name="merchandise" href="merchandise.html">Merchandise</a>';
 header+='<a><i class="fa fa-search searchShift" aria-hidden="true"></i></a>';
 header+='</div>';
 
