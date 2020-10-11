@@ -12,8 +12,15 @@ header+='</div>';
 
 
 $(document).ready(function(){
+  var all_Teams=$.parseJSON($.ajax({
+          url:  'https://api.sportsdata.io/v3/nba/scores/json/teams?key=f42659ac160444bf8017635bc7a299c5',
+          type: 'GET',
+          headers: {  'Access-Control-Allow-Origin': 'https://api.sportsdata.io'},
+          dataType: "json",
+          async: false
+      }).responseText);
   $("#headFrame").append(header);
-
+  $(".sidenav").append('<a>'+all_Teams[0].City+ ' ' + all_Teams[0].Name+'</a>');
   var docurl= document.URL;
 
   $("#headFrame a").each(function( index ) {
@@ -24,14 +31,15 @@ $(document).ready(function(){
     $(this).addClass("active");
    }
 });
-$()
-var all_Teams=$.parseJSON($.ajax({
-        url:  'https://api.sportsdata.io/v3/nba/scores/json/AllTeams?key=f42659ac160444bf8017635bc7a299c5',
-        type: 'GET',
-        headers: {  'Access-Control-Allow-Origin': 'https://api.sportsdata.io'},
-        dataType: "json",
-        async: false
-    }).responseText);
+
+
+Array.prototype.removeValue = function(name, value){
+  var array = $.map(this, function(v,i){
+      return v[name] === value ? null : v;
+  });
+  this.length = 0; //clear original array
+  this.push.apply(this, array); //push all elements except the one we want to delete
+}
 
 var all_Players=$.parseJSON($.ajax({
         url:  'https://api.sportsdata.io/v3/nba/scores/json/Players?key=f42659ac160444bf8017635bc7a299c5',
@@ -42,6 +50,7 @@ var all_Players=$.parseJSON($.ajax({
     }).responseText);
     
 console.log(all_Teams);
+console.log(all_Players);
 
 document.getElementById('TeamData').innerHTML='<h1>TeamData</h1>'+all_Teams;
 document.getElementById('PlayerData').innerHTML='<h1>PlayerData</h1>'+all_Players;
