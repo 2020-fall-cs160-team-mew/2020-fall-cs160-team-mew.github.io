@@ -21,7 +21,7 @@ $(document).ready(function(){
     }).responseText);
     $("#headFrame").append(header);
     for (var i = 0; i < all_Teams.length; i++){
-        $(".sidenav").append('<div class="team"><img class="logo" src="'+all_Teams[i].WikipediaLogoUrl+'"> <a value=#'+all_Teams[i].PrimaryColor+'>'+all_Teams[i].City+ ' ' + all_Teams[i].Name+'</a>');
+        $(".sidenav").append('<i class="fa fa-chevron-right" aria-hidden="true"></i><div class="team"><img class="logo" src="'+all_Teams[i].WikipediaLogoUrl+'"> <a value=#'+all_Teams[i].PrimaryColor+'>'+all_Teams[i].City+ ' ' + all_Teams[i].Name+'</a>');
     }
     $( ".team a" ).each(function(index) {
         $(this).hover(function() {
