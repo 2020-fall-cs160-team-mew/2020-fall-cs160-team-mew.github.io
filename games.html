@@ -1,10 +1,210 @@
 <header>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="header.js"></script>
+  <script src="/js/header.js"></script>
 </header>
 
+
+<style>
+    * {box-sizing: border-box}
+    .mySlides {display: none}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 500px;
+      position: relative;
+      margin: auto;
+      margin-left:45%;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      display:inline-block;
+      cursor: pointer;
+      padding: 16px;
+      color: black;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+      display:inline-block;
+    }
+    
+ 
+    /* Caption text */
+    .text {
+      color: black;
+      display:inline-block;
+
+      font-size: 15px;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: black;
+      font-size: 12px;
+      padding: 8px 12px;
+      top: 0;
+    }
+  
+  .games h2{
+    color:white;
+
+  }
+  .games p{
+    color:white;
+  }
+  button, input, select, textarea {
+    font-size: 18px;
+}
+</style>
+
 <div id="headFrame">
+</div>
+
+
+<div class="games">
+  <div class="row">
+      <div class="col-md-8" style="background-color: #1d428a;">
+        <div style="margin-left:100px;padding: 20px;padding-right:50px;padding-bottom:40px;">
+        <h2>Schedule</h2>
+        <p>All 2019-20 NBA Restart games are played across three venues at the ESPN Wide World of 
+          Sports Complex in Orlando, Florida and tipped off on July 30. Based on a competitive 
+          format approved by the NBA Board of Governors and the NBPA, 22 teams returned to play during the 2019-20 NBA season. 
+          The 22 teams consist of the 16 teams (eight per conference) in playoff positions and the six teams that 
+          were six games or fewer behind the eighth seed in their respective conferences when the season was suspended.</p>
+        </div>
+      </div>
+      <div>
+        <h1 style="margin-left:70%;margin-bottom:50px;"> Select a Team</h1>
+        <div style="margin-left:70%">
+          <select style="background:inherit;border:none;width:50%;" name="team" id="teamsdropdown">
+          </select>
+        </div>   
+      </div>
+  </div>
+
+     
+
+    <div class="slideshow-container" >
+      <span class="prev" style="color:black;" onclick="plusSlides(-1)">&#10094;</span>
+
+          <div class="mySlides">
+            <div class="text">September 11th</div>
+          </div>
+          
+          <div class="mySlides ">
+            <div class="text">September 12th</div>
+          </div>
+          
+          <div class="mySlides">
+            <div class="text">September 13th</div>
+          </div>
+          <span class="next" style="color:black;" onclick="plusSlides(1)">&#10095;</span>
+    </div>
+    
+    
+    <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "inline-block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+
+</div>
+
+<div id="signupModal" class="modal">
+  
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1 style="text-align:center;">Sign Up</h1>
+    <div style="text-align:center;" >
+      <br>
+      <label for="email"><b>Email</b></label>
+      <br>
+
+      <input id="emailsign" type="text" placeholder="Enter Email" name="email" required>
+
+      <br>
+      <label for="psw"><b>Password</b></label>
+      <br>
+      
+
+      <input id="passwordsign" type="password" placeholder="Enter Password" name="psw" required>
+
+      <br>
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <br>
+
+      <input id="passwordsign2" type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      <br>
+      <br>
+  
+      <p>By creating an account you agree to our <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <button class ="buttonHead" style="margin-left:-5px;width: 200px;"><a id="formsignup">Sign Up</a></button>
+
+    </div>
+  </div>
+
+</div>
+
+<div id="loginModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h1 style="text-align:center;">Log In</h1>
+    <form style="text-align:center;">
+      <br>
+      <label for="email"><b>Email</b></label>
+      <br>
+
+      <input id="emaillog" type="text" placeholder="Enter Email" name="email" required>
+
+      <br>
+      <label for="psw"><b>Password</b></label>
+      <br>
+      
+
+      <input id="passwordlog" type="password" placeholder="Enter Password" name="psw" required>
+      <br>
+      <br>
+  
+      <button class ="buttonHead" style="margin-left:-5px;width: 200px;"><a>Log In</a></button>
+
+    </form>
+  </div>
+
 </div>
