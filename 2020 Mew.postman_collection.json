@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "8422018f-b5c2-4ab9-b634-a519bed183ee",
+		"name": "2020 Mew",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign in User:",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getuserinstance?email=heywaspopping@gmail.com&password=yoyo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getuserinstance"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "heywaspopping@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "yoyo"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Sign in User:",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/getuserinstance?email=heywaspopping@gmail.com&password=yoyo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"getuserinstance"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "heywaspopping@gmail.com"
+								},
+								{
+									"key": "password",
+									"value": "yoyo"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "199"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c7-iA8i0wpk4OL46TLf8BiWmAf05ts\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 17 Nov 2020 05:12:56 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"email\": \"heywaspopping@gmail.com\",\n        \"favorites\": \"{ teams: ['GSW','ATL','LA','LAC','BOS','MIA'], players:['Kobe Bryant','Lebron James','Stephen Curry','Danny Green','Kyle Kuzma']}\",\n        \"password\": \"yoyo\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Sign in User No Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getuserinstance?email=&password=111",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getuserinstance"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": ""
+						},
+						{
+							"key": "password",
+							"value": "111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign in User No Password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/getuserinstance?email=mm@gmail.com&password=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"getuserinstance"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mm@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Duplicate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User No Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User No Email Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User No Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User no password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "{message:'Please Log In'} Displays on the Front End. If the cookie doesn't exist the code won't make the request"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User No Email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User no password",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "{message:'Please Log In'} Displays on the Front End. If the cookie doesn't exist the code won't make the request"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
