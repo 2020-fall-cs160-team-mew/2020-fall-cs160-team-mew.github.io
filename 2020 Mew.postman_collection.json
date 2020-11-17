@@ -159,7 +159,7 @@
 		{
 			"name": "Create User",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": ""
@@ -181,7 +181,7 @@
 		{
 			"name": "Create User No Email",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": ""
@@ -192,7 +192,7 @@
 		{
 			"name": "Create User No Email Copy",
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"url": {
 					"raw": ""
